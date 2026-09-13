@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lavish — Creative Designer</title>
+
+  <meta
+    name="description"
+    content="Lavish — Graphic, Fashion, Logo and UI/UX Designer."
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+
+      padding: 22px 4%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: rgba(8, 8, 8, 0.72);
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 28px;
+
+      font-size: 13px;
+      color: #999;
+    }
+
+    .navlinks a {
+      transition: 0.3s;
+    }
+
+    .navlinks a:hover {
+      color: #fff;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 100px;
+    }
+
+    .eyebrow {
+      color: #777;
+
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      font-size: 11px;
+
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 9vw, 125px);
+
+      line-height: 0.88;
+
+      letter-spacing: -6px;
+
+      max-width: 1050px;
+    }
+
+    .hero p {
+      max-width: 600px;
+
+      color: #999;
+
+      font-size: 17px;
+
+      margin-top: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+
+      gap: 14px;
+
+      margin-top: 35px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+
+      border: 1px solid #444;
+
+      border-radius: 100px;
+
+      font-size: 13px;
+
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: #fff;
+
+      color: #000;
+
+      border-color: #fff;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+
+    /* ================= SECTIONS ================= */
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section-head {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      margin-bottom: 40px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(34px, 5vw, 65px);
+
+      letter-spacing: -3px;
+    }
+
+    .section-head span {
+      color: #666;
+
+      font-size: 12px;
+    }
+
+
+    /* ================= MARQUEE ================= */
+
+    .marquee {
+      border-top: 1px solid #222;
+
+      border-bottom: 1px solid #222;
+
+      overflow: hidden;
+
+      white-space: nowrap;
+
+      padding: 18px 0;
+
+      color: #666;
+    }
+
+    .marquee span {
+      display: inline-block;
+
+      margin-right: 45px;
+
+      font-size: 13px;
+
+      letter-spacing: 3px;
+    }
+
+
+    /* ================= FEATURED ================= */
+
+    .featured {
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr;
+
+      gap: 20px;
+    }
+
+    .project {
+      position: relative;
+
+      overflow: hidden;
+
+      background: #111;
+    }
+
+    .project img {
+      height: 100%;
+
+      min-height: 430px;
+
+      transition: 0.6s;
+    }
+
+    .project:hover img {
+      transform: scale(1.035);
+    }
+
+    .project-info {
+      position: absolute;
+
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+    }
+
+    .project-info small {
+      color: #ccc;
+    }
+
+    .project-info h3 {
+      font-size: 22px;
+    }
+
+
+    /* ================= FILTERS ================= */
+
+    .filters {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-bottom: 30px;
+    }
+
+    .filter {
+      background: transparent;
+
+      color: #888;
+
+      border: 1px solid #292929;
+
+      padding: 10px 17px;
+
+      border-radius: 100px;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: #fff;
+
+      color: #000;
+
+      border-color: #fff;
+    }
+
+
+    /* ================= PORTFOLIO GRID ================= */
+
+    .grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .work {
+      cursor: pointer;
+    }
+
+    .work-image {
+      aspect-ratio: 4 / 3;
+
+      overflow: hidden;
+
+      background: #111;
+    }
+
+    .work-image img {
+      height: 100%;
+
+      transition: 0.5s;
+    }
+
+    .work:hover .work-image img {
+      transform: scale(1.05);
+    }
+
+    .work-meta {
+      padding: 14px 2px 25px;
+
+      display: flex;
+
+      justify-content: space-between;
+    }
+
+    .work-meta span {
+      font-size: 12px;
+
+      color: #777;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      border-top: 1px solid #222;
+    }
+
+    .service {
+      padding: 35px 0;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-bottom: 1px solid #222;
+    }
+
+    .service h3 {
+      font-size: 25px;
+
+      font-weight: 500;
+    }
+
+    .service p {
+      max-width: 430px;
+
+      color: #777;
+
+      font-size: 14px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: start;
+    }
+
+    .about h2 {
+      font-size: clamp(38px, 5vw, 70px);
+
+      line-height: 0.95;
+
+      letter-spacing: -3px;
+    }
+
+    .about p {
+      color: #999;
+
+      margin-bottom: 20px;
+
+      font-size: 16px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+      border-top: 1px solid #222;
+
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(45px, 8vw, 100px);
+
+      letter-spacing: -5px;
+
+      line-height: 0.9;
+    }
+
+    .contact p {
+      color: #777;
+
+      margin: 25px 0;
+    }
+
+    .email {
+      font-size: clamp(20px, 4vw, 42px);
+
+      display: inline-block;
+
+      border-bottom: 1px solid #555;
+
+      padding-bottom: 5px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 30px 0;
+
+      border-top: 1px solid #222;
+
+      color: #666;
+
+      font-size: 12px;
+
+      display: flex;
+
+      justify-content: space-between;
+    }
+
+    .socials {
+      display: flex;
+
+      gap: 18px;
+    }
+
+
+    /* ================= LIGHTBOX ================= */
+
+    .lightbox {
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,0.94);
+
+      z-index: 300;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 30px;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+
+      max-height: 88vh;
+
+      width: auto;
+    }
+
+    .close {
+      position: absolute;
+
+      top: 25px;
+
+      right: 30px;
+
+      font-size: 30px;
+
+      cursor: pointer;
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 800px) {
+
+      .navlinks {
+        display: none;
+      }
+
+      .featured,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .section {
+        padding: 85px 0;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .project img {
+        min-height: 300px;
+      }
+
+      footer {
+        flex-direction: column;
+
+        gap: 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+
+    <a href="#" class="logo">
+      LAVISH®
+    </a>
+
+    <div class="navlinks">
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Graphic & Digital Designer
+        </div>
+
+        <h1>
+          I design visuals
+          <br>
+          that matter.
+        </h1>
+
+        <p>
+          I'm Lavish — a multidisciplinary designer creating
+          bold thumbnails, fashion visuals, memorable identities
+          and clean digital experiences.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="#work"
+            class="btn primary"
+          >
+            View selected work
+          </a>
+
+          <a
+            href="#contact"
+            class="btn"
+          >
+            Let's talk
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MARQUEE ================= -->
+
+    <div class="marquee">
+
+      <span>
+        THUMBNAIL DESIGN
+      </span>
+
+      <span>
+        FASHION DESIGN
+      </span>
+
+      <span>
+        LOGO DESIGN
+      </span>
+
+      <span>
+        UI/UX DESIGN
+      </span>
+
+      <span>
+        VISUAL DESIGN
+      </span>
+
+    </div>
+
+
+    <!-- ================= WORK ================= -->
+
+    <section
+      class="section"
+      id="work"
+    >
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Selected work
+          </h2>
+
+          <span>
+            01 — 12
+          </span>
+
+        </div>
+
+
+        <!-- FEATURED PROJECTS -->
+
+        <div class="featured">
+
+
+          <!-- FEATURED THUMBNAIL -->
+
+          <div class="project">
+
+            <img
+              src="images/thumbnail-1.jpg"
+              alt="Thumbnail Design"
+            >
+
+            <div class="project-info">
+
+              <div>
+
+                <h3>
+                  Thumbnail Design
+                </h3>
+
+                <small>
+                  01 / Visual Campaign
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FEATURED FASHION -->
+
+          <div class="project">
+
+            <img
+              src="images/fashion-1.jpg"
+              alt="Fashion Design"
+            >
+
+            <div class="project-info">
+
+              <div>
+
+                <h3>
+                  Fashion Design
+                </h3>
+
+                <small>
+                  02 / Editorial Visual
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div style="height:70px"></div>
+                <!-- ================= FILTER BUTTONS ================= -->
+
+        <div class="filters">
+
+          <button
+            class="filter active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            class="filter"
+            data-filter="thumbnail"
+          >
+            Thumbnails
+          </button>
+
+          <button
+            class="filter"
+            data-filter="fashion"
+          >
+            Fashion
+          </button>
+
+          <button
+            class="filter"
+            data-filter="logo"
+          >
+            Logo
+          </button>
+
+          <button
+            class="filter"
+            data-filter="uiux"
+          >
+            UI/UX
+          </button>
+
+        </div>
+
+
+        <!-- ================= PORTFOLIO GRID ================= -->
+
+        <div class="grid">
+
+
+          <!-- ===== THUMBNAIL 01 ===== -->
+
+          <div
+            class="work"
+            data-category="thumbnail"
+            onclick="openLightbox('images/thumbnail-1.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/thumbnail-1.jpg"
+                alt="Thumbnail Design 01"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Thumbnail 01
+              </b>
+
+              <span>
+                Thumbnail Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== THUMBNAIL 02 ===== -->
+
+          <div
+            class="work"
+            data-category="thumbnail"
+            onclick="openLightbox('images/thumbnail-2.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/thumbnail-2.jpg"
+                alt="Thumbnail Design 02"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Thumbnail 02
+              </b>
+
+              <span>
+                Thumbnail Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== THUMBNAIL 03 ===== -->
+
+          <div
+            class="work"
+            data-category="thumbnail"
+            onclick="openLightbox('images/thumbnail-3.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/thumbnail-3.jpg"
+                alt="Thumbnail Design 03"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Thumbnail 03
+              </b>
+
+              <span>
+                Thumbnail Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== FASHION 01 ===== -->
+
+          <div
+            class="work"
+            data-category="fashion"
+            onclick="openLightbox('images/fashion-1.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/fashion-1.jpg"
+                alt="Fashion Design 01"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Fashion 01
+              </b>
+
+              <span>
+                Fashion Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== FASHION 02 ===== -->
+
+          <div
+            class="work"
+            data-category="fashion"
+            onclick="openLightbox('images/fashion-2.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/fashion-2.jpg"
+                alt="Fashion Design 02"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Fashion 02
+              </b>
+
+              <span>
+                Fashion Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== FASHION 03 ===== -->
+
+          <div
+            class="work"
+            data-category="fashion"
+            onclick="openLightbox('images/fashion-3.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/fashion-3.jpg"
+                alt="Fashion Design 03"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Fashion 03
+              </b>
+
+              <span>
+                Fashion Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== LOGO 01 ===== -->
+
+          <div
+            class="work"
+            data-category="logo"
+            onclick="openLightbox('images/logo-1.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/logo-1.jpg"
+                alt="Logo Design 01"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Logo 01
+              </b>
+
+              <span>
+                Brand Identity
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== LOGO 02 ===== -->
+
+          <div
+            class="work"
+            data-category="logo"
+            onclick="openLightbox('images/logo-2.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/logo-2.jpg"
+                alt="Logo Design 02"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Logo 02
+              </b>
+
+              <span>
+                Brand Identity
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== LOGO 03 ===== -->
+
+          <div
+            class="work"
+            data-category="logo"
+            onclick="openLightbox('images/logo-3.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/logo-3.jpg"
+                alt="Logo Design 03"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                Logo 03
+              </b>
+
+              <span>
+                Brand Identity
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== UI/UX 01 ===== -->
+
+          <div
+            class="work"
+            data-category="uiux"
+            onclick="openLightbox('images/uiux-1.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/uiux-1.jpg"
+                alt="UI UX Design 01"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                UI/UX 01
+              </b>
+
+              <span>
+                Digital Product
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== UI/UX 02 ===== -->
+
+          <div
+            class="work"
+            data-category="uiux"
+            onclick="openLightbox('images/uiux-2.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/uiux-2.jpg"
+                alt="UI UX Design 02"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                UI/UX 02
+              </b>
+
+              <span>
+                Digital Product
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ===== UI/UX 03 ===== -->
+
+          <div
+            class="work"
+            data-category="uiux"
+            onclick="openLightbox('images/uiux-3.jpg')"
+          >
+
+            <div class="work-image">
+
+              <img
+                src="images/uiux-3.jpg"
+                alt="UI UX Design 03"
+              >
+
+            </div>
+
+            <div class="work-meta">
+
+              <b>
+                UI/UX 03
+              </b>
+
+              <span>
+                Digital Product
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section
+      class="section"
+      id="services"
+    >
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Services
+          </h2>
+
+          <span>
+            WHAT I DO
+          </span>
+
+        </div>
+
+
+        <div class="services">
+
+
+          <!-- SERVICE 01 -->
+
+          <div class="service">
+
+            <h3>
+              01 — Thumbnail Design
+            </h3>
+
+            <p>
+              High-impact YouTube and social thumbnails
+              designed to grab attention and communicate
+              the idea instantly.
+            </p>
+
+          </div>
+
+
+          <!-- SERVICE 02 -->
+
+          <div class="service">
+
+            <h3>
+              02 — Fashion Design
+            </h3>
+
+            <p>
+              Modern fashion concepts, visual direction,
+              editorial compositions and creative presentation.
+            </p>
+
+          </div>
+
+
+          <!-- SERVICE 03 -->
+
+          <div class="service">
+
+            <h3>
+              03 — Logo Design
+            </h3>
+
+            <p>
+              Distinctive logos and visual identities built
+              around clarity, personality and strong visual systems.
+            </p>
+
+          </div>
+
+
+          <!-- SERVICE 04 -->
+
+          <div class="service">
+
+            <h3>
+              04 — UI/UX Design
+            </h3>
+
+            <p>
+              Clean digital interfaces and user experiences
+              focused on usability, hierarchy and visual quality.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      class="section"
+      id="about"
+    >
+
+      <div class="container about">
+
+        <h2>
+          Design with
+          <br>
+          intention.
+        </h2>
+
+        <div>
+
+          <p>
+            I'm Lavish, a multidisciplinary designer working
+            across graphic, fashion and digital design.
+          </p>
+
+          <p>
+            My approach is simple: remove the unnecessary,
+            strengthen the idea, and create visuals people remember.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+      class="section contact"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Have a project?
+        </div>
+
+        <h2>
+          Let's create
+          <br>
+          something.
+        </h2>
+
+        <p>
+          For design work, collaborations and creative projects.
+        </p>
+
+        <a
+          class="email"
+          href="mailto:lavishx9090@gmail.com"
+        >
+          lavishx9090@gmail.com
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+    <!-- ================= FOOTER ================= -->
+
+  <footer class="container">
+
+    <div>
+      © 2026 LAVISH
+    </div>
+
+    <div class="socials">
+
+      <!-- Replace # with your actual profile links -->
+
+      <a
+        href="#"
+        target="_blank"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="#"
+        target="_blank"
+      >
+        Behance
+      </a>
+
+      <a
+        href="#"
+        target="_blank"
+      >
+        Dribbble
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= LIGHTBOX ================= -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox()"
+  >
+
+    <div class="close">
+      ×
+    </div>
+
+    <img
+      id="lightboxImg"
+      src=""
+      alt="Portfolio Preview"
+    >
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* =========================================
+       PORTFOLIO FILTER
+    ========================================= */
+
+    const buttons =
+      document.querySelectorAll(".filter");
+
+    const works =
+      document.querySelectorAll(".work");
+
+
+    buttons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        /* Remove active from all buttons */
+
+        buttons.forEach(btn => {
+
+          btn.classList.remove("active");
+
+        });
+
+
+        /* Add active to clicked button */
+
+        button.classList.add("active");
+
+
+        /* Get selected category */
+
+        const filter =
+          button.dataset.filter;
+
+
+        /* Show / hide projects */
+
+        works.forEach(work => {
+
+          if (
+            filter === "all" ||
+            work.dataset.category === filter
+          ) {
+
+            work.style.display = "block";
+
+          } else {
+
+            work.style.display = "none";
+
+          }
+
+        });
+
+      });
+
+    });
+
+
+    /* =========================================
+       OPEN LIGHTBOX
+    ========================================= */
+    /** @param {string} src */
+function openLightbox(src){
+    
+
+      const lightbox =
+        document.getElementById("lightbox");
+
+      const image =
+        document.getElementById("lightboxImg");
+
+
+      image.src = src;
+
+
+      lightbox.classList.add("show");
+
+    }
+
+
+    /* =========================================
+       CLOSE LIGHTBOX
+    ========================================= */
+
+    function closeLightbox() {
+
+      document
+        .getElementById("lightbox")
+        .classList.remove("show");
+
+    }
+
+
+    /* =========================================
+       ESCAPE KEY
+    ========================================= */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+  </script>
+
+
+</body>
+</html>
